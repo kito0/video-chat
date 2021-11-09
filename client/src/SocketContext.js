@@ -74,5 +74,28 @@ const ContextProvider = ({ children }) => {
 		connectionRef.current = peer;
 	};
 
-	const leaveCall = () => {};
+	const leaveCall = () => {
+		setCallEnded(true);
+		connectionRef.current.destroy();
+		window.location.reload();
+	};
+
+	return (
+		<SocketContext.Provider
+			value={{
+				call,
+				callAccepted,
+				myVideo,
+				userVideo,
+				streamData,
+				name,
+				setName,
+				callEnded,
+				me,
+				callUser,
+				answerCall,
+				leaveCall,
+			}}
+		></SocketContext.Provider>
+	);
 };
