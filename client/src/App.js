@@ -7,19 +7,6 @@ import Notifications from './components/Notifications';
 import Options from './components/Options';
 
 const useStyles = makeStyles((theme) => ({
-	appBar: {
-		borderRadius: '30px 100px',
-		display: 'flex',
-		flexDirection: 'row',
-		justifyContent: 'center',
-		alignItems: 'center',
-		width: '600px',
-		border: '2px solid black',
-
-		[theme.breakpoints.down('xs')]: {
-			width: '90%',
-		},
-	},
 	wrapper: {
 		display: 'flex',
 		flexDirection: 'column',
