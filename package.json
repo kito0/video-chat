@@ -1,28 +1,29 @@
 {
-  "name": "voice-chat",
-  "version": "1.0.0",
-  "description": "Realtime video chat application using WebRTC and Node.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kito0/video-chat.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kito0/video-chat/issues"
-  },
-  "homepage": "https://github.com/kito0/video-chat#readme",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "socket.io": "^4.3.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.14"
-  }
+	"name": "voice-chat",
+	"version": "1.0.0",
+	"description": "Realtime video chat application using WebRTC and Node.",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kito0/video-chat.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/kito0/video-chat/issues"
+	},
+	"homepage": "https://github.com/kito0/video-chat#readme",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"socket.io": "^4.3.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.14"
+	}
 }
