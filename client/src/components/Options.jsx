@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {
 	Button,
 	TextField,
@@ -12,6 +12,37 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Assignment, Phone, PhoneDisabled } from '@material-ui/icons';
 
 import { SocketContext } from '../SocketContext';
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		display: 'flex',
+		flexDirection: 'column',
+	},
+	gridContainer: {
+		width: '100%',
+		[theme.breakpoints.down('xs')]: {
+			flexDirection: 'column',
+		},
+	},
+	container: {
+		width: '600px',
+		margin: '35px 0',
+		padding: 0,
+		[theme.breakpoints.down('xs')]: {
+			width: '80%',
+		},
+	},
+	margin: {
+		marginTop: 20,
+	},
+	padding: {
+		padding: 20,
+	},
+	paper: {
+		padding: '10px 20px',
+		border: '2px solid black',
+	},
+}));
 
 const Options = ({ children }) => {
 	const { me, name, setName, callAccepted, callEnded, leaveCall, callUser } =
@@ -67,8 +98,7 @@ const Options = ({ children }) => {
 									onClick={leaveCall}
 									className={classes.margin}
 								>
-									{' '}
-									End Call{' '}
+									End Call
 								</Button>
 							) : (
 								<Button
@@ -79,15 +109,14 @@ const Options = ({ children }) => {
 									onClick={() => callUser(idToCall)}
 									className={classes.margin}
 								>
-									{' '}
-									End Call{' '}
+									Call
 								</Button>
 							)}
 						</Grid>
 					</Grid>
 				</form>
 			</Paper>
-			Options{children}
+			{children}
 		</Container>
 	);
 };
