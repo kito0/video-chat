@@ -87,7 +87,7 @@ const ContextProvider = ({ children }) => {
 				callAccepted,
 				myVideo,
 				userVideo,
-				streamData,
+				stream,
 				name,
 				setName,
 				callEnded,
